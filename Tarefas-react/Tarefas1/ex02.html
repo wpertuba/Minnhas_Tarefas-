@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 02</title>
+</head>
+
+<body>
+    <p>
+        Escreva código com ES6 diretamente em uma página HTML para criar uma classe chamada "Carro",
+        que deve ter os seguintes métodos: constructor(nome, ano) e mostrarIdade().
+        Em seguida, crie um objeto dessa classe e mostre a seguinte mensagem no browser:
+        O meu carro tem <mostrar a idade do carro> anos. Por exemplo: O meu carro tem 3 anos.
+    </p>
+    <script>
+        class carro {
+            constructor(nome) {
+                this.marca = nome
+            }
+            apresentar() {
+                return 'Eu tenho um ' + this.marca
+            }
+        }
+        class modelo extends carro {
+            constructor(nome, ano,) {
+                super(nome); //o cronstrutor chamado e pode implementar
+                let idade 
+                this.idade = 2021 - ano
+               
+            }
+            //criar metodo mostrar
+            mostrarIdade() { //chama método da classe pai
+                return this.apresentar() + ' , ele tem ' + this.idade + 'anos'
+            }
+        }
+        car_type = new modelo('BMW', 2018)
+        document.write(car_type.mostrarIdade())
+    </script>
+
+</body>
+
+</html>

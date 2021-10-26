@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 01</title>
+</head>
+<body>
+    <script>
+        class carro{
+            constructor(nome, ano){
+                this.marca = nome;
+                this.ano = ano;
+            }
+            apresentar(){
+                return this.marca + " " + this.ano
+            }
+        }
+    car_type = new carro("BMW", 2018)
+    document.write(car_type.apresentar())
+    </script>
+    
+</body>
+</html>

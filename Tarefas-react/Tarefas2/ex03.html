@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <title>Exercício 03</title>
+</head>
+
+<body>
+    <p>
+        Escreva código com JSX, diretamente em uma página HTML, para calcular a média
+        aritmética de três notas.
+    </p>
+    <br />
+
+    <div id="root"></div>
+
+    <script type="text/babel">
+
+        let num1 = + parseFloat(prompt("Primeira nota: "));
+        let num2 = + parseFloat(prompt("Segunda nota: "));
+        let num3 = + parseFloat(prompt("Terceira nota: "));
+
+        function med() {
+
+            let media = ((num1 + num2 + num3) / 3);
+
+    
+            document.write('<p>Primeira nota: </p>' + num1 +
+                '<br/><p>Segunda nota: </p>' + num2 + '<br/><p>Terceira nota: </p>' + num3 +
+                '<br/><p>Média das notas: </p>' + media);
+
+        }
+        ReactDOM.render(med(), document.getElementById("root"));
+    </script>
+
+</body>
+
+</html>

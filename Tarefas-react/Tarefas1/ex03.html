@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3</title>
+</head>
+
+<body>
+    <p>
+        Crie uma classe chamada "FuncionarioComissionado" com ES6, que herdará os métodos da classe "Funcionario".
+        A classe "Funcionario" deve ter os seguintes métodos: constructor(nome, numCTPS, salario) e mostrarDados()
+        para retornar todos os dados de um funcionário. A classe "FuncionarioComissionado" deve ter os seguintes
+        métodos:
+        constructor(nome, numCTPS, salario, venda, comissao) e mostrarDados() para retornar todos
+        os dados de um funcionário comissionado. Em seguida, crie um objeto de cada uma das classes e
+        mostre os respectivos dados no browser.
+    </p>
+
+    <script>
+        class Funcionario {
+            constructor (nome, numCTPS, salario){
+                this.nome =nome
+                this.numCTPS = numCTPS
+                this.salario = salario
+            }
+            mostrarDados(){
+                return "Nome: " + this.nome + " número CTPS: " + this.numCTPS + " Salário: " + this.salario
+            }
+        }
+
+        class FuncionarioComissionado extends Funcionario{
+            constructor (nome, numCTPS, salario, venda, comissao){
+                super(nome, numCTPS, salario)
+                this.venda = venda
+                this.comissao = comissao
+            }
+            mostrar(){
+                return this.mostrarDados() + " comissão: " + this.comissao + ' Vendas: ' + this.venda
+            }
+        }
+
+        funcionario01 = new FuncionarioComissionado('Pedro ',102030,"R$ 4500 ",'R$ 600 ', 'R$ 3900 ')
+        document.write(funcionario01.mostrar())
+    </script>
+
+</body>
+
+</html>

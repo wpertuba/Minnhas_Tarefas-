@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <title>Exercício 01</title>
+   
+</head>
+<body>
+
+    <p>Escreva código com JSX, diretamente em uma página HTML, para somar dois números.</p><br/>
+
+    <div id="root"></div>
+
+    <script>
+
+        let num1 = prompt("Primeiro valor:");
+        let num2 = prompt("Segundo valor:");
+
+        function soma() {
+            let resultado = parseFloat(num1) + parseFloat(num2);
+
+            document.write('<p>Primeiro valor: </p>' + num1 + '<br/> <p>Segundo valor: </p>' + num2 + 
+            '<br/><p>Resultado: </p>' + resultado);
+        }
+        ReactDOM.render(soma(), document.getElementById("root"));
+    </script>
+
+</body>
+
+</html>

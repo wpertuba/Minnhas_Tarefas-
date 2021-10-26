@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 08</title>
+</head>
+
+<body>
+    <h1> Exercício 08 - Feito agora com Arro Function </h1>
+    <p>
+        Faça uma função anônima com ES6, armazenada na variável descobrirDiametro, que receba o parâmetro "raio" e
+        imprima a seguinte mensagem no browser: O diâmetro é: <mostrar o respectivo valor>.
+    </p>
+    <p id="demo"></p>
+    <script>
+        descobrirDiametro =  (raio) =>  ' O diâmetro é: '+ raio*2; 
+        
+        document.getElementById("demo").innerHTML = descobrirDiametro(12)
+    </script>
+</body>
+
+</html>
